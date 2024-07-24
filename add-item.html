@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="helloWorldApp">
+<head>
+    <title>Add Item</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="AddItemController">
+    <h1>Add Item</h1>
+    <form ng-submit="addItem()">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" ng-model="itemData.name" placeholder="Item Name" required />
+
+        <label for="startingBid">Starting Bid:</label>
+        <input type="number" id="startingBid" ng-model="itemData.startingBid" placeholder="Starting Bid" required />
+
+        <label for="imageUrl">Image URL:</label>
+        <input type="url" id="imageUrl" ng-model="itemData.imageUrl" placeholder="Image URL" required />
+
+        <label for="bidEndTime">Bid End Time:</label>
+        <input type="datetime-local" id="bidEndTime" ng-model="itemData.bidEndTime" placeholder="Bid End Time" required />
+
+        <button type="submit">Add Item</button>
+    </form>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>

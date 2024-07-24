@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="helloWorldApp">
+<head>
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="LoginController">
+    <h1>Login</h1>
+    <form ng-submit="login()">
+        <input type="text" ng-model="loginData.username" placeholder="Username" required />
+        <input type="password" ng-model="loginData.password" placeholder="Password" required />
+        <button type="submit">Login</button>
+    </form>
+    <div ng-if="loginMessage">{{ loginMessage }}</div>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
